@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>The Mims Family Pics</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" />
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+  <style>
+    :root {
+      --primary: #2d2f88;
+      --secondary: #ffb347;
+      --light-bg: linear-gradient(to right, #ffecd2, #fcb69f);
+      --font-light: #ffffff;
+      --font-dark: #333333;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: var(--light-bg);
+      color: var(--font-dark);
+    }
+
+    .w3-sidebar {
+      background: var(--primary) !important;
+      color: white !important;
+    }
+
+    .w3-bar-item {
+      color: white !important;
+    }
+
+    .w3-bar-item:hover {
+      background: var(--secondary) !important;
+      color: #111 !important;
+    }
+
+    .w3-top {
+      background: white !important;
+      color: var(--primary);
+      border-bottom: 2px solid #eee;
+    }
+
+    .w3-main {
+      background-color: #ffffff;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      margin-top: 100px;
+    }
+
+    h3, h4 {
+      font-weight: 600;
+    }
+
+    .w3-padding-32, .w3-padding-16 {
+      padding-top: 32px !important;
+      padding-bottom: 32px !important;
+    }
+
+    .w3-image {
+      border-radius: 8px;
+    }
+
+    .w3-tag {
+      background: var(--secondary) !important;
+      color: #000 !important;
+      font-weight: bold;
+      margin: 2px;
+    }
+
+    footer {
+      background-color: #f5f5f5 !important;
+    }
+
+    .w3-black, .w3-dark-grey {
+      background-color: var(--primary) !important;
+      color: #fff !important;
+    }
+
+    .highlight-section {
+      background-color: rgba(255,255,255,0.9);
+      border-radius: 10px;
+      padding: 2rem;
+      margin: 2rem 0;
+    }
+  </style>
+</head>
+
+<body class="w3-content" style="max-width:1600px">
+
+<!-- Sidebar -->
+<nav class="w3-sidebar w3-bar-block w3-collapse w3-top w3-center w3-animate-left" style="z-index:3;width:300px;font-weight:bold" id="mySidebar">
+  <h3 class="w3-padding-64 w3-center"><b>The Mims<br>Family</b></h3>
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hide-large">CLOSE</a>
+  <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT US</a>
+  <a href="#gallery" onclick="w3_close()" class="w3-bar-item w3-button">FAMILY PHOTOS</a>
+  <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT</a>
+</nav>
+
+<!-- Top menu on small screens -->
+<header class="w3-container w3-top w3-hide-large w3-white w3-xlarge w3-padding-16">
+  <span class="w3-left w3-padding">The Mims Family</span>
+  <a href="javascript:void(0)" class="w3-right w3-button w3-white" onclick="w3_open()">☰</a>
+</header>
+
+<!-- Push down content for mobile -->
+<div class="w3-hide-large" style="margin-top:85px"></div>
+
+<!-- Overlay effect -->
+<div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" id="myOverlay"></div>
+
+<!-- Page Content -->
+<div class="w3-main" style="margin-left:300px">
+
+  <!-- About section -->
+  <section id="about" class="w3-container highlight-section w3-center">
+    <h3>About Us</h3>
+    <img src="Manza Professional Suit.jpg" alt="Manza Mims" class="w3-image w3-padding-16" width="600">
+    <div class="w3-content w3-justify" style="max-width:600px">
+      <h4>Manza Mims</h4>
+      <p>Hello! Meet the family. I love taking photos of our most precious moments and decided to create this site to share our joy with you. Enjoy the photos of our extremely happy family!</p>
+      <p><strong>Email:</strong> ManzaMims@gmail.com</p>
+      <p><strong>Phone:</strong> 5353 35531</p>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <section id="gallery" class="w3-container">
+    <h3 class="w3-center">Family Gallery</h3>
+    <div class="w3-row">
+      <div class="w3-third">
+        <img src="Malcolm & Phoebe.jpg" style="width:100%" onclick="onClick(this)" alt="Malcolm And Phoebe Taking a Family Selfie">
+        <img src="Manza & Phoebe.jpg" style="width:100%" onclick="onClick(this)" alt="Phoebe Styling Manza’s Hair">
+        <img src="The Mims Girls.jpg" style="width:100%" onclick="onClick(this)" alt="Phoebe, Isabella — Garden Field Fun">
+      </div>
+      <div class="w3-third">
+        <img src="Danville Mexican League Team.jpg" style="width:100%" onclick="onClick(this)" alt="Tournament Champs!">
+        <img src="Madison Training With Adoniyah.jpg" style="width:100%" onclick="onClick(this)" alt="Training Time at the Park">
+        <img src="Kaiser At The Zoo.jpg" style="width:100%" onclick="onClick(this)" alt="Kaiser’s First Zoo Day">
+      </div>
+      <div class="w3-third">
+        <img src="Mike And Drew.jpg" style="width:100%" onclick="onClick(this)" alt="Mike & Drew’s Pic">
+        <img src="Earl, Mike, Malcolm.jpg" style="width:100%" onclick="onClick(this)" alt="Father, Mike, and Malcolm — Generations">
+        <img src="Myrryah.jpg" style="width:100%" onclick="onClick(this)" alt="Myrryah Chilling Outdoors">
+      </div>
+    </div>
+  </section>
+
+  <!-- Modal for full-size images -->
+  <div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
+    <span class="w3-button w3-black w3-xlarge w3-display-topright">×</span>
+    <div class="w3-modal-content w3-animate-zoom w3-center">
+      <img id="img01" class="w3-image">
+      <p id="caption" class="w3-opacity w3-large"></p>
+    </div>
+  </div>
+
+  <!-- Contact -->
+  <section id="contact" class="w3-container w3-padding-32 w3-light-grey">
+    <div class="w3-content" style="max-width:600px">
+      <h4 class="w3-center"><b>Contact Me</b></h4>
+      <p>Do you want me to photograph your family? Fill out the form and share your story.</p>
+      <form action="/action_page.php" target="_blank">
+        <div class="w3-section">
+          <label>Name</label>
+          <input class="w3-input w3-border" type="text" name="Name" required>
+        </div>
+        <div class="w3-section">
+          <label>Email</label>
+          <input class="w3-input w3-border" type="text" name="Email" required>
+        </div>
+        <div class="w3-section">
+          <label>Message</label>
+          <input class="w3-input w3-border" type="text" name="Message" required>
+        </div>
+        <button type="submit" class="w3-button w3-block w3-black">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="w3-container w3-padding-32">
+    <div class="w3-row-padding">
+      <div class="w3-third">
+        <h3>INFO</h3>
+        <p>Want to learn more about the Mims family? Just reach out!</p>
+      </div>
+
+      <div class="w3-third">
+        <h3>MANZA POSTS</h3>
+        <ul class="w3-ul">
+          <li class="w3-padding-16 w3-hover-black">
+            <img src="PhotoRoom-20230725_154602.png" class="w3-left w3-margin-right" style="width:50px">
+            <span class="w3-large">Good Clothing</span><br>
+            <span>Professional Looks</span>
+          </li>
+          <li class="w3-padding-16 w3-hover-black">
+            <img src="Manza Looks Good.jpg" class="w3-left w3-margin-right" style="width:50px">
+            <span class="w3-large">Family First</span><br>
+            <span>Capturing Good Times</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="w3-third">
+        <h3>Family Tags</h3>
+        <p>
+          <span class="w3-tag">Family</span>
+          <span class="w3-tag">Love</span>
+          <span class="w3-tag">Kids</span>
+          <span class="w3-tag">Parents</span>
+          <span class="w3-tag">Generations</span>
+          <span class="w3-tag">Togetherness</span>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <div class="w3-black w3-center w3-padding-24">
+    Powered by <a href="https://zerotomastery.io" class="w3-hover-opacity">Zero To Mastery</a>
+  </div>
+</div>
+
+<!-- Scripts -->
+<script>
+  function w3_open() {
+    document.getElementById("mySidebar").style.display = "block";
+    document.getElementById("myOverlay").style.display = "block";
+  }
+
+  function w3_close() {
+    document.getElementById("mySidebar").style.display = "none";
+    document.getElementById("myOverlay").style.display = "none";
+  }
+
+  function onClick(element) {
+    document.getElementById("img01").src = element.src;
+    document.getElementById("modal01").style.display = "block";
+    document.getElementById("caption").innerText = element.alt || "Family Moment";
+  }
+</script>
+
+</body>
+</html>
+
+
